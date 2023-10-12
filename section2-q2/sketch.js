@@ -9,7 +9,7 @@ function setup() {
       let x = size * i
       let y = size * j
     if((x+y)%2==1){
-      fill(100);
+      fill(130);
       rect (x,y,size,size);
     }
     else{
