@@ -16,7 +16,7 @@ function setup() {
 
   function drawCircle(c, r){
    fill(c);
-   ellipse(cx, cy, r, r);
+   ellipse(cx, cy, r);
 }
 
 function drawArcs(c1, c2, r) {
@@ -32,7 +32,7 @@ drawCircle(black, maxR);
   drawArcs(green, red, maxR * 0.8);
   drawArcs(cream,black,maxR * 0.75);
   drawArcs(green, red, maxR * 0.5);
-  drawArcs(black,cream,maxR * 0.45);
+  drawArcs(cream,black,maxR * 0.45);
   drawCircle(green,maxR * 0.1);
   // BLANK[1] (hint: drawArcs x 3, drawCircle x 1)
   drawCircle(red, maxR * 0.05);
