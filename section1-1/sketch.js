@@ -12,5 +12,5 @@ function draw() {
   fill(204);
   textSize(88);
   textFont("serif");
-  text("46", 68, 100);
+  text("100", 68, 100);
 }
