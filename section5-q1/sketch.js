@@ -11,8 +11,19 @@ function balloon(t){
   let w = textWidth(t);
   let h = textAscent() + textDescent();
   let p = 2;
-  fill(0);
-  rect(0, 0, w + p * 2, h + p * 2);
-  fill(255);
-  text(t, p, h + p);
+  noStroke();
+   fill (189,8,174);
+   rect(23.5,23.5,w+p*20+3,h+p*20+3);
+   noStroke();
+   fill (255);
+   rect(21.5,21.5,w+p*20+1.5,h+p*20+1.5)
+   noStroke();
+   fill(5,171,77);
+   triangle(20,19+h+p*20,38,20+h+p*20,30,40+h+p*20);
+   noStroke();
+   fill (5,171,77);
+   rect(20,20,w+p*20,h+p*20);
+   noStroke();
+   fill(255);
+   text(t, p*20, (h + p)*2.5); 
 }
