@@ -7,7 +7,7 @@ function setup(){
   crossmark(10, 10, 90, 90);
   ngmark(150, 50, 80);
   star(250, 50, 40);
-  regularPolygon(6, 350, 50, 20);
+  regularPolygon(8, 350, 50, 20);
 }
 
 function crossmark(x1, y1, x2, y2){
@@ -41,7 +41,7 @@ function regularPolygon(n, cx, cy, r){
   const radian = 2*r;
   let angle = 0;
   beginShape();
-  for(let j=0; j<=6; j++){
+  for(let j=0; j<=n; j++){
    let x = cx + radian*cos(angle);
    let y = cy + radian*sin(angle);
    vertex(x,y);

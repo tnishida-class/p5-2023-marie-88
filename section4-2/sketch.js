@@ -3,10 +3,12 @@
 // 練習問題：何も操作しなくてもボールが湧いてくる機能を追加しよう
 
 let balls;
+// let Balls;
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
   balls = [];
+  // Balls = [];
 }
 
 function draw(){
@@ -15,9 +17,23 @@ function draw(){
     let b = balls[i];
     ellipse(b.x, b.y, b.size);
     b.x += b.vx;
-    b.y += b.vy;
-  }
+    b.y += b.vy;    
+  } 
 }
+
+//  while (Balls.length < 100){
+//    const s = random (5,120);
+//    const ba = new Ball(
+//     random(0+s,width-s),
+//     random(0+s,height-s),
+//     randomRGB(),
+//     s,
+//   );
+//   Balls.push(ba);
+//   }   
+
+
+
 
 function mouseDragged(){
   const dx = mouseX - pmouseX;
@@ -26,7 +42,9 @@ function mouseDragged(){
     const b = { x: mouseX, y: mouseY, size: random (5,120), vx: dx, vy: dy };
     balls.push(b);
   }
-}
+}  
+
+
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);
