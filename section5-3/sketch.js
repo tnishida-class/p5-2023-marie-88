@@ -1,10 +1,11 @@
 // テキスト「関数を作る(2) 結果を戻す関数」～「総仕上げ：カレンダーを描画しよう」
 function setup(){
   createCanvas(200, 200);
-  // calendar(2019, 10);
+  //calendar(2019, 10);
 
+  /*
   // isLeapYear の動作確認のため console に出力しています
-  /*for(let i = 2000; i <= 2100; i++){
+  for(let i = 2000; i <= 2100; i++){
     if(isLeapYear(i)){
       console.log(i + "年はうるう年です");
     }
@@ -12,18 +13,9 @@ function setup(){
       console.log(i + "年はうるう年ではありません");
     }
   }
-  //console
-  for(let i = 2000; i<= 2100; i++){
-    if(isLeapYear(i)){
-      console.log(i + "年は366日です。");
-    }
-    else{
-      console.log(i + "年は365日です。");
-    }
-  }
-  */
 }
-/*
+
+
 function calendar(y, m){
   let dow = dayOfWeek(y, m, 1);
   for(let d = 1; d <= daysInMonth(y, m); d++){
@@ -31,23 +23,56 @@ function calendar(y, m){
   }
 }
 */
+
+const mounthNumber = [1,4,3,6,1,4,6,3,5,0,3,5];
+const dateNumber = ["日曜","月曜","火曜","水曜","木曜","金曜","土曜"];
+let num;
+let date;
+let year4;
+let j;
+
+function dayOfWeek(y, m, d){
+  
+  if(m == 1||m == 2){
+    year4 = y-1
+  }else{
+    year4 = y
+  };
+    
+  if(y < 2000){
+    j =1
+  }else{
+    j = 0
+  };
+  let year2 = year4 % 100;
+  num = year2 + (Math.floor(year2 / 4)) + mounthNumber[m-1] + d + j;
+  date = dateNumber[(num % 7)-1]
+  console.log(y+"年"+m+"月"+d+"日は"+date+"です");
+  
+ 
+}
+
+dayOfWeek(2015, 6, 29)
+
+
+
+
+
+
+
+
+
+
+
+/*
 function isLeapYear(y){
   return (y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0);
 }
 
 function daysInYear(y){
   // BLANK[1]
-  if(isLeapYear(y)){
-    // return 366;
-    console.log("366日です")
-  }
-  else{
-    // return 365;
-    console.log("365日です")
-  }
-  }
-  daysInYear(2023);
-/*
+}
+
 function daysInMonth(y, m){
   if(m == 2){
     return isLeapYear(y) ? 29 : 28;
@@ -76,4 +101,5 @@ function dayOfWeekAsString(dow){
   const a = ["日", "月", "火", "水", "木", "金", "土", "日"];
   return a[dow];
 }
-*/
+*///
+}
