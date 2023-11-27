@@ -110,6 +110,14 @@ function displayGameOverScreen() {
     //スコアとリスタート案内を表示
   text("Score: " + score, width / 2, height / 2 + 40);
   text("Press ENTER to restart", width / 2, height / 2 + 80);
+  textSize(60);
+  text("🦌",width/2-150,height/2+200);
+  text("🦌",width/2-100,height/2+200);
+  text("🦌",width/2-50,height/2+200);
+  text("🛷",width/2+100,height/2+200);
+  fill(212,255,254);
+  rect(0,height/2+225,width,height-height/2+225);
+  text("🌕",width/2+150,height/2-150);
 }
 
 //ゲーム中の中身
